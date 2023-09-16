@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片庫</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="card-library">
+        <!-- 卡片將在這裡顯示 -->
+    </div>
+
+    <button onclick="showRandomCard()">隨機抽取一張卡片</button>
+    <button onclick="showAddCardForm()">直接新增卡片</button>
+    <input type="file" id="csvInput" onchange="importCSV(event)">
+    <button onclick="browseCardLibrary()">瀏覽遊戲卡片庫</button>
+
+    <div id="addCardForm" style="display: none;">
+        <input type="text" id="cardTopic" placeholder="卡片主題">
+        <input type="text" id="cardTitle" placeholder="卡片標題">
+        <textarea id="cardContent" placeholder="卡片內容"></textarea>
+        <button onclick="addCard()">新增卡片</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
